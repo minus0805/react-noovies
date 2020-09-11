@@ -3,8 +3,7 @@ import styled from "styled-components/native";
 import PropTypes from "prop-types";
 import Poster from "./Poster";
 import { apiImage } from "../api";
-import { trimText } from "../utils";
-import { formatDate } from "../utils";
+import { trimText, formatDate } from "../utils";
 import { TouchableOpacity } from "react-native";
 
 const Container = styled.View`
@@ -37,7 +36,8 @@ const Overview = styled.Text`
     margin-top: 10px;
 `;
 
-const Horizontal = ({id, title, overview, poster, releaseDate}) => (
+const Horizontal = ({id, title, overview, poster, releaseDate}) => {
+return (
     <TouchableOpacity>
         <Container>
             <Poster url={poster} />
@@ -48,13 +48,13 @@ const Horizontal = ({id, title, overview, poster, releaseDate}) => (
             </Data>
         </Container>
     </TouchableOpacity>
-)
+)}
 
 Horizontal.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
-  poster: PropTypes.string.isRequired,
+  poster: PropTypes.string,
   releaseDate: PropTypes.string
 };
 

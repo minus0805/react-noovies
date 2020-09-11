@@ -36,5 +36,5 @@ export default () => {
         getData();
     }, []);
 
-    return <TvPresenter {...shows}/>;
+    return <TvPresenter refreshFn={getData} {...shows}/>;
 };
