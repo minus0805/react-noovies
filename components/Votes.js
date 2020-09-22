@@ -7,6 +7,6 @@ const Container = styled.Text`
     font-weight: 500;
 `;
 
-const Votes = ({ votes }) => <Container>⭐️{votes}</Container>
+const Votes = ({ votes }) => <Container>⭐️ {votes}/10</Container>
 
 export default Votes;
